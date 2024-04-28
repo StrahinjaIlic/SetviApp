@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct SetviAppApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            UserDetailsView()
+            let viewModel = UserDetailsViewModel(service: UserDetailsService())
+            UserDetailsView(viewModel: viewModel)
         }
     }
 }
+
+

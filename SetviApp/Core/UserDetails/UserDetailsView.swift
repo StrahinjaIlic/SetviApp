@@ -8,15 +8,28 @@
 import SwiftUI
 
 struct UserDetailsView: View {
+    @ObservedObject private var viewModel: UserDetailsViewModel
+    @StateObject private var colorSchemeManager = ColorSchemeManager.shared
+    
+    init(viewModel: UserDetailsViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
-        Text("User Details")
+        NavigationStack {
+            Text(viewModel.user?.name ?? "")
+        }
+        .onAppear {
+            // test existing user as check
+            viewModel.searchUserName = "radianttap"
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct UserDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        UserDetailsView()
+        UserDetailsView(viewModel: UserDetailsViewModel(service: UserDetailsService()))
+            .preferredColorScheme(ColorSchemeManager.shared.getPreferredColorScheme())
     }
 }
 
