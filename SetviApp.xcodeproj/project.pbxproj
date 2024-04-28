@@ -8,17 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		561C4BD42BDEDCDE00D9099D /* SetviAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C4BD32BDEDCDE00D9099D /* SetviAppApp.swift */; };
-		561C4BD62BDEDCDE00D9099D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C4BD52BDEDCDE00D9099D /* ContentView.swift */; };
+		561C4BD62BDEDCDE00D9099D /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C4BD52BDEDCDE00D9099D /* UserDetailsView.swift */; };
 		561C4BD82BDEDCDE00D9099D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561C4BD72BDEDCDE00D9099D /* Assets.xcassets */; };
 		561C4BDB2BDEDCDE00D9099D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561C4BDA2BDEDCDE00D9099D /* Preview Assets.xcassets */; };
+		561C4BE92BDEE05C00D9099D /* ColorSchemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C4BE82BDEE05C00D9099D /* ColorSchemeManager.swift */; };
+		561C4BEB2BDEE09200D9099D /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C4BEA2BDEE09200D9099D /* Color+Ext.swift */; };
+		561C4BED2BDEE0AD00D9099D /* UserDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C4BEC2BDEE0AD00D9099D /* UserDetailsService.swift */; };
+		561C4BEF2BDEE0BA00D9099D /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C4BEE2BDEE0BA00D9099D /* UserDetails.swift */; };
+		561C4BF22BDEE12A00D9099D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561C4BF12BDEE12A00D9099D /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		561C4BD02BDEDCDE00D9099D /* SetviApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SetviApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		561C4BD32BDEDCDE00D9099D /* SetviAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetviAppApp.swift; sourceTree = "<group>"; };
-		561C4BD52BDEDCDE00D9099D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		561C4BD52BDEDCDE00D9099D /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
 		561C4BD72BDEDCDE00D9099D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		561C4BDA2BDEDCDE00D9099D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		561C4BE82BDEE05C00D9099D /* ColorSchemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeManager.swift; sourceTree = "<group>"; };
+		561C4BEA2BDEE09200D9099D /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		561C4BEC2BDEE0AD00D9099D /* UserDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsService.swift; sourceTree = "<group>"; };
+		561C4BEE2BDEE0BA00D9099D /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		561C4BF12BDEE12A00D9099D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +62,12 @@
 			isa = PBXGroup;
 			children = (
 				561C4BD32BDEDCDE00D9099D /* SetviAppApp.swift */,
-				561C4BD52BDEDCDE00D9099D /* ContentView.swift */,
-				561C4BD72BDEDCDE00D9099D /* Assets.xcassets */,
+				561C4BE12BDEDF5600D9099D /* Utilities */,
+				561C4BE22BDEDF6500D9099D /* Extensions */,
+				561C4BE32BDEDF8700D9099D /* Services */,
+				561C4BE42BDEDF8C00D9099D /* Models */,
+				561C4BE52BDEDF9C00D9099D /* Core */,
+				561C4BE62BDEDFA200D9099D /* Resource */,
 				561C4BD92BDEDCDE00D9099D /* Preview Content */,
 			);
 			path = SetviApp;
@@ -65,6 +79,71 @@
 				561C4BDA2BDEDCDE00D9099D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		561C4BE12BDEDF5600D9099D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				561C4BE82BDEE05C00D9099D /* ColorSchemeManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		561C4BE22BDEDF6500D9099D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				561C4BEA2BDEE09200D9099D /* Color+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		561C4BE32BDEDF8700D9099D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				561C4BEC2BDEE0AD00D9099D /* UserDetailsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		561C4BE42BDEDF8C00D9099D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				561C4BEE2BDEE0BA00D9099D /* UserDetails.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		561C4BE52BDEDF9C00D9099D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				561C4BF02BDEE11500D9099D /* Launch */,
+				561C4BE72BDEE02500D9099D /* UserDetails */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		561C4BE62BDEDFA200D9099D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				561C4BD72BDEDCDE00D9099D /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		561C4BE72BDEE02500D9099D /* UserDetails */ = {
+			isa = PBXGroup;
+			children = (
+				561C4BD52BDEDCDE00D9099D /* UserDetailsView.swift */,
+			);
+			path = UserDetails;
+			sourceTree = "<group>";
+		};
+		561C4BF02BDEE11500D9099D /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				561C4BF12BDEE12A00D9099D /* Launch Screen.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				561C4BF22BDEE12A00D9099D /* Launch Screen.storyboard in Resources */,
 				561C4BDB2BDEDCDE00D9099D /* Preview Assets.xcassets in Resources */,
 				561C4BD82BDEDCDE00D9099D /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +217,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				561C4BD62BDEDCDE00D9099D /* ContentView.swift in Sources */,
+				561C4BE92BDEE05C00D9099D /* ColorSchemeManager.swift in Sources */,
+				561C4BEB2BDEE09200D9099D /* Color+Ext.swift in Sources */,
+				561C4BD62BDEDCDE00D9099D /* UserDetailsView.swift in Sources */,
+				561C4BED2BDEE0AD00D9099D /* UserDetailsService.swift in Sources */,
 				561C4BD42BDEDCDE00D9099D /* SetviAppApp.swift in Sources */,
+				561C4BEF2BDEE0BA00D9099D /* UserDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,8 +362,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -308,8 +392,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
