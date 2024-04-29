@@ -14,11 +14,7 @@ class UserDetailsViewModel: ObservableObject {
     @Published var user: UserDetails?
     @Published var isLoading = false
     
-    @Published var searchUserName: String = "" {
-        didSet {
-            fetchUserDetails()
-        }
-    }
+    @Published var searchUserName: String = ""
     
     private var cancellables = Set<AnyCancellable>()
     private var debouncedSearchTerm: String = ""

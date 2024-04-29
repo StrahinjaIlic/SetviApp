@@ -9,6 +9,15 @@ import UIKit
 
 final class ReposTableViewCell: UITableViewCell {
     
+    private let repoTitle: UILabel = {
+        let label = UILabel()
+        label.text = "Test 1"
+        label.textColor = .label
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     // MARK: - Init
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -25,6 +34,16 @@ final class ReposTableViewCell: UITableViewCell {
 extension ReposTableViewCell {
     
     private func setupViews() {
-        contentView.backgroundColor = .blue
+        contentView.backgroundColor = .secondarySystemBackground
+        
+        let padding: CGFloat = 16
+        
+        contentView.addSubview(repoTitle)
+        NSLayoutConstraint.activate([
+            repoTitle.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+            repoTitle.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
+            repoTitle.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
+            repoTitle.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding),
+        ])
     }
 }

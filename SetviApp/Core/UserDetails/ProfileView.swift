@@ -95,7 +95,7 @@ struct ProfileView: View {
         .frame(width: 100, height: 40)
         .background(Color.theme.myRed)
         .foregroundStyle(.white)
-        .font(.headline)
+        .font(.subheadline)
         .clipShape(Capsule())
         .padding()
     }

@@ -17,7 +17,6 @@ final class RepoListViewController: UIViewController {
         tableView.separatorStyle = .singleLine
         tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.layer.cornerRadius = 8
         tableView.clipsToBounds = true
         return tableView
     }()
@@ -35,7 +34,6 @@ extension RepoListViewController {
     
     private func setupViews() {
         view.backgroundColor = .systemBackground
-        
         view.addSubview(reposTableView)
         
         NSLayoutConstraint.activate([
@@ -57,7 +55,8 @@ extension RepoListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = reposTableView.dequeueReusableCell(withIdentifier: ReposTableViewCell.cellIdentifier, for: indexPath) as! ReposTableViewCell
+        let cell = reposTableView.dequeueReusableCell(
+            withIdentifier: ReposTableViewCell.cellIdentifier, for: indexPath) as! ReposTableViewCell
         return cell
     }
 }

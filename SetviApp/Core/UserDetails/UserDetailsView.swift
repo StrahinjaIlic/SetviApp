@@ -55,7 +55,7 @@ extension UserDetailsView {
             
             UIApplication.shared.endEditing()
         }
-        .frame(width: 100, height: 50)
+        .frame(width: 120, height: 50)
         .background(Color.theme.myGreen)
         .foregroundStyle(.white)
         .clipShape(Capsule())
