@@ -33,6 +33,9 @@ struct UserDetailsView: View {
                     ProfileView(user: user)
                 }
             }
+            .background(Color.theme.background)
+            .navigationTitle("User Profile")
+            .navigationBarTitleDisplayMode(.large)
             .padding()
         }
         .onAppear {
@@ -49,6 +52,8 @@ extension UserDetailsView {
     private var loadUserButton: some View {
         Button("Load User") {
             viewModel.fetchUserDetails()
+            
+            UIApplication.shared.endEditing()
         }
         .frame(width: 100, height: 50)
         .background(Color.theme.myGreen)

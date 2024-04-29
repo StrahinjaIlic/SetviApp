@@ -38,9 +38,19 @@ extension NetworkService: NetworkServiceProtocol {
         guard let url = URL(string: endpoint.path) else {
             throw NetworkError.invalidURL
         }
-        
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try JSONDecoder().decode(T.self, from: data)
+        // I lost some time to check why suddenly i got bad response, seems i reached some limit with API calls
+        do {
+            let (data, response) = try await URLSession.shared.data(from: url)
+            print(response)
+            return try JSONDecoder().decode(T.self, from: data)
+        } catch let error as NSError {
+            if error.code == NSURLErrorCancelled {
+                try await Task.sleep(nanoseconds: 5 * 1000)
+                return try await fetch(endpoint: endpoint)
+            } else {
+                throw error
+            }
+        }
     }
 }
 

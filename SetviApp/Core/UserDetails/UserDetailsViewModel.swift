@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 class UserDetailsViewModel: ObservableObject {
     private let service: UserDetailsServiceProtocol
@@ -18,6 +19,9 @@ class UserDetailsViewModel: ObservableObject {
             fetchUserDetails()
         }
     }
+    
+    private var cancellables = Set<AnyCancellable>()
+    private var debouncedSearchTerm: String = ""
     
     // MARK: - Init
     

@@ -12,42 +12,47 @@ import SwiftUI
 struct ProfileView: View {
     let user: UserDetails
     @State var image: UIImage? = nil
+    @State private var isRepoListPresented = false
     
     var body: some View {
-        VStack(alignment: .center, spacing: 12) {
-            
-            userDetailsLabel
-            
-            vStackLabels
-            
-            if let avatarURL = user.avatarURL {
-                AsyncImage(url: avatarURL) { image in
-                    image
-                        .resizable()
-                        .frame(width: 100, height: 100)
-                        .clipShape(Circle())
-                } placeholder: {
-                    ProgressView()
+        NavigationView {
+            VStack(alignment: .center, spacing: 12) {
+                
+                userDetailsLabel
+                
+                vStackLabels
+                
+                if let avatarURL = user.avatarURL {
+                    AsyncImage(url: avatarURL) { image in
+                        image
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                            .clipShape(Circle())
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .padding()
+                    .overlay(
+                        Circle()
+                            .stroke(Color.theme.myRed, lineWidth: 2)
+                    )
                 }
-                .padding()
-                .overlay(
-                    Circle()
-                        .stroke(Color.theme.myRed, lineWidth: 2)
-                )
+                
+                seeReposButton
             }
-        }
-        .padding()
-        .background(Color.background)
-        .cornerRadius(8)
-        .onAppear {
-            Task {
-                await downloadCoinImage()
+            .padding()
+            .background(Color.background)
+            .cornerRadius(8)
+            .onAppear {
+                Task {
+                    await downloadCoinImage()
+                }
+            }
+            .navigationDestination(isPresented: $isRepoListPresented) {
+                RepoListView()
             }
         }
     }
-}
-
-extension ProfileView {
     
     private func downloadCoinImage() async {
         guard let url = user.avatarURL else { return }
@@ -60,9 +65,6 @@ extension ProfileView {
             self.image = UIImage(systemName: "person.fill")
         }
     }
-}
-
-extension ProfileView {
     
     private var userDetailsLabel: some View {
         Text("User Details")
@@ -84,6 +86,18 @@ extension ProfileView {
                     .padding(.horizontal)
             }
         }
+    }
+    
+    private var seeReposButton: some View {
+        Button("See repos") {
+            isRepoListPresented = true
+        }
+        .frame(width: 100, height: 40)
+        .background(Color.theme.myRed)
+        .foregroundStyle(.white)
+        .font(.headline)
+        .clipShape(Capsule())
+        .padding()
     }
 }
 

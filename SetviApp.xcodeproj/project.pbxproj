@@ -17,6 +17,10 @@
 		561C4BEF2BDEE0BA00D9099D /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C4BEE2BDEE0BA00D9099D /* UserDetails.swift */; };
 		561C4BF22BDEE12A00D9099D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561C4BF12BDEE12A00D9099D /* Launch Screen.storyboard */; };
 		567C19452BE018750040EDFA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C19442BE018750040EDFA /* ProfileView.swift */; };
+		567C19492BE023EF0040EDFA /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C19482BE023EF0040EDFA /* UIApplication+Ext.swift */; };
+		567C194C2BE029430040EDFA /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C194B2BE029430040EDFA /* ReposViewController.swift */; };
+		567C194E2BE02BF60040EDFA /* ReposTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C194D2BE02BF60040EDFA /* ReposTableViewCell.swift */; };
+		567C19502BE02C4D0040EDFA /* UITableViewCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C194F2BE02C4D0040EDFA /* UITableViewCell+Ext.swift */; };
 		56989F6C2BDEE95000A2077B /* UserDetailsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56989F6B2BDEE95000A2077B /* UserDetailsEndpoint.swift */; };
 		56989F6E2BDEEA4100A2077B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56989F6D2BDEEA4100A2077B /* NetworkService.swift */; };
 		56989F702BDEEACD00A2077B /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56989F6F2BDEEACD00A2077B /* UserDetailsViewModel.swift */; };
@@ -35,6 +39,10 @@
 		561C4BEE2BDEE0BA00D9099D /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		561C4BF12BDEE12A00D9099D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		567C19442BE018750040EDFA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		567C19482BE023EF0040EDFA /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
+		567C194B2BE029430040EDFA /* ReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
+		567C194D2BE02BF60040EDFA /* ReposTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposTableViewCell.swift; sourceTree = "<group>"; };
+		567C194F2BE02C4D0040EDFA /* UITableViewCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Ext.swift"; sourceTree = "<group>"; };
 		56989F6B2BDEE95000A2077B /* UserDetailsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsEndpoint.swift; sourceTree = "<group>"; };
 		56989F6D2BDEEA4100A2077B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		56989F6F2BDEEACD00A2077B /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -104,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				561C4BEA2BDEE09200D9099D /* Color+Ext.swift */,
+				567C19482BE023EF0040EDFA /* UIApplication+Ext.swift */,
+				567C194F2BE02C4D0040EDFA /* UITableViewCell+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -131,6 +141,7 @@
 			children = (
 				561C4BF02BDEE11500D9099D /* Launch */,
 				561C4BE72BDEE02500D9099D /* UserDetails */,
+				567C194A2BE029360040EDFA /* Repos */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -159,6 +170,15 @@
 				561C4BF12BDEE12A00D9099D /* Launch Screen.storyboard */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		567C194A2BE029360040EDFA /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+				567C194B2BE029430040EDFA /* ReposViewController.swift */,
+				567C194D2BE02BF60040EDFA /* ReposTableViewCell.swift */,
+			);
+			path = Repos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,10 +255,14 @@
 				561C4BE92BDEE05C00D9099D /* ColorSchemeManager.swift in Sources */,
 				561C4BEB2BDEE09200D9099D /* Color+Ext.swift in Sources */,
 				56989F702BDEEACD00A2077B /* UserDetailsViewModel.swift in Sources */,
+				567C194C2BE029430040EDFA /* ReposViewController.swift in Sources */,
 				56989F6E2BDEEA4100A2077B /* NetworkService.swift in Sources */,
+				567C19492BE023EF0040EDFA /* UIApplication+Ext.swift in Sources */,
 				561C4BD62BDEDCDE00D9099D /* UserDetailsView.swift in Sources */,
+				567C194E2BE02BF60040EDFA /* ReposTableViewCell.swift in Sources */,
 				561C4BED2BDEE0AD00D9099D /* UserDetailsService.swift in Sources */,
 				561C4BD42BDEDCDE00D9099D /* SetviAppApp.swift in Sources */,
+				567C19502BE02C4D0040EDFA /* UITableViewCell+Ext.swift in Sources */,
 				56989F722BDEF0AF00A2077B /* ColorTheme.swift in Sources */,
 				561C4BEF2BDEE0BA00D9099D /* UserDetails.swift in Sources */,
 				567C19452BE018750040EDFA /* ProfileView.swift in Sources */,
@@ -383,6 +407,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -413,6 +438,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
