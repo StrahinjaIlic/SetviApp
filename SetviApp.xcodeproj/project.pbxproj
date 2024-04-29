@@ -16,6 +16,7 @@
 		561C4BED2BDEE0AD00D9099D /* UserDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C4BEC2BDEE0AD00D9099D /* UserDetailsService.swift */; };
 		561C4BEF2BDEE0BA00D9099D /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C4BEE2BDEE0BA00D9099D /* UserDetails.swift */; };
 		561C4BF22BDEE12A00D9099D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561C4BF12BDEE12A00D9099D /* Launch Screen.storyboard */; };
+		567C19452BE018750040EDFA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C19442BE018750040EDFA /* ProfileView.swift */; };
 		56989F6C2BDEE95000A2077B /* UserDetailsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56989F6B2BDEE95000A2077B /* UserDetailsEndpoint.swift */; };
 		56989F6E2BDEEA4100A2077B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56989F6D2BDEEA4100A2077B /* NetworkService.swift */; };
 		56989F702BDEEACD00A2077B /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56989F6F2BDEEACD00A2077B /* UserDetailsViewModel.swift */; };
@@ -33,6 +34,7 @@
 		561C4BEC2BDEE0AD00D9099D /* UserDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsService.swift; sourceTree = "<group>"; };
 		561C4BEE2BDEE0BA00D9099D /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		561C4BF12BDEE12A00D9099D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		567C19442BE018750040EDFA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		56989F6B2BDEE95000A2077B /* UserDetailsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsEndpoint.swift; sourceTree = "<group>"; };
 		56989F6D2BDEEA4100A2077B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		56989F6F2BDEEACD00A2077B /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				56989F6F2BDEEACD00A2077B /* UserDetailsViewModel.swift */,
 				561C4BD52BDEDCDE00D9099D /* UserDetailsView.swift */,
+				567C19442BE018750040EDFA /* ProfileView.swift */,
 			);
 			path = UserDetails;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				561C4BD42BDEDCDE00D9099D /* SetviAppApp.swift in Sources */,
 				56989F722BDEF0AF00A2077B /* ColorTheme.swift in Sources */,
 				561C4BEF2BDEE0BA00D9099D /* UserDetails.swift in Sources */,
+				567C19452BE018750040EDFA /* ProfileView.swift in Sources */,
 				56989F6C2BDEE95000A2077B /* UserDetailsEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@ import SwiftUI
 struct ColorTheme {
     let accent = Color("AccentColor")
     let background = Color("BackgroundColor")
-    let green = Color("CTGreenColor")
-    let red = Color("CTRedColor")
+    let myGreen = Color("CTGreenColor")
+    let myRed = Color("CTRedColor")
     let secondaryText = Color("SecondaryTextColor")
 }

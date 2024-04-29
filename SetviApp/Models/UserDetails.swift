@@ -17,4 +17,8 @@ struct UserDetails: Codable {
         case avatarURL = "avatar_url"
         case company
     }
+    
+    static let dummyUser = UserDetails(name: "Petar Petrovic",
+                                       avatarURL: URL(string: "www.apple.com"),
+                                       company: "Apple")
 }

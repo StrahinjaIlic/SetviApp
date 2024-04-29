@@ -12,11 +12,14 @@ private let baseURL = "https://api.github.com"
 enum Endpoint {
     
     case userDetails(username: String)
+    case userRepositories(username: String)
     
     var path: String {
         switch self {
         case .userDetails(let username):
             return baseURL + "/users/\(username)"
+        case .userRepositories(let username):
+            return baseURL + "/users/\(username)/repos"
         }
     }
 }

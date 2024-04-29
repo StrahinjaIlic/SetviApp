@@ -10,6 +10,15 @@ import Foundation
 enum NetworkError: Error {
     case invalidURL
     case failedRequest
+    
+    var errorDescription: String? {
+        switch self {
+        case .invalidURL:
+            return "[🔥] Bad response from URL"
+        case .failedRequest:
+            return "[⚠️] Unknown error occurred"
+        }
+    }
 }
 
 protocol NetworkServiceProtocol {
@@ -34,3 +43,12 @@ extension NetworkService: NetworkServiceProtocol {
         return try JSONDecoder().decode(T.self, from: data)
     }
 }
+
+extension NetworkService {
+    
+    func fetchImage(from url: URL) async throws -> Data {
+        let (data, _) = try await URLSession.shared.data(from: url)
+        return data
+    }
+}
+

@@ -11,7 +11,7 @@ class UserDetailsViewModel: ObservableObject {
     private let service: UserDetailsServiceProtocol
     
     @Published var user: UserDetails?
-    @Published private var isLoading = false
+    @Published var isLoading = false
     
     @Published var searchUserName: String = "" {
         didSet {
