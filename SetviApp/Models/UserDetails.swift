@@ -22,3 +22,16 @@ struct UserDetails: Codable {
                                        avatarURL: URL(string: "www.apple.com"),
                                        company: "Apple")
 }
+
+
+import Foundation
+
+struct Repository: Codable {
+    let name: String
+    let description: String?
+
+    enum CodingKeys: String, CodingKey {
+        case name
+        case description
+    }
+}

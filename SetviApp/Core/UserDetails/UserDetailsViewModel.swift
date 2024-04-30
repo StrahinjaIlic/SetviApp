@@ -40,7 +40,7 @@ class UserDetailsViewModel: ObservableObject {
             do {
                 let userDetails = try await service.fetchUserDetails(username: searchUserName)
                 DispatchQueue.main.async {
-                    print("user details fetched", userDetails)
+                    print("user details fetched", userDetails.name ?? "")
                     self.user = userDetails
                     self.isLoading = false
                 }

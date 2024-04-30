@@ -11,7 +11,7 @@ final class ReposTableViewCell: UITableViewCell {
     
     private let repoTitle: UILabel = {
         let label = UILabel()
-        label.text = "Test 1"
+        label.text = "No repository"
         label.textColor = .label
         label.font = UIFont.boldSystemFont(ofSize: 18)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -28,6 +28,10 @@ final class ReposTableViewCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configure(name: String) {
+        repoTitle.text = name
     }
 }
 

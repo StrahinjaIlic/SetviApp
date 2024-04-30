@@ -16,6 +16,8 @@
 		561C4BED2BDEE0AD00D9099D /* UserDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C4BEC2BDEE0AD00D9099D /* UserDetailsService.swift */; };
 		561C4BEF2BDEE0BA00D9099D /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C4BEE2BDEE0BA00D9099D /* UserDetails.swift */; };
 		561C4BF22BDEE12A00D9099D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561C4BF12BDEE12A00D9099D /* Launch Screen.storyboard */; };
+		562C854E2BE10EFA007064AC /* ReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C854D2BE10EFA007064AC /* ReposViewModel.swift */; };
+		562C85502BE114F1007064AC /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C854F2BE114F1007064AC /* Variable.swift */; };
 		567C19452BE018750040EDFA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C19442BE018750040EDFA /* ProfileView.swift */; };
 		567C19492BE023EF0040EDFA /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C19482BE023EF0040EDFA /* UIApplication+Ext.swift */; };
 		567C194C2BE029430040EDFA /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C194B2BE029430040EDFA /* ReposViewController.swift */; };
@@ -38,6 +40,8 @@
 		561C4BEC2BDEE0AD00D9099D /* UserDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsService.swift; sourceTree = "<group>"; };
 		561C4BEE2BDEE0BA00D9099D /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		561C4BF12BDEE12A00D9099D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		562C854D2BE10EFA007064AC /* ReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewModel.swift; sourceTree = "<group>"; };
+		562C854F2BE114F1007064AC /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
 		567C19442BE018750040EDFA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		567C19482BE023EF0040EDFA /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
 		567C194B2BE029430040EDFA /* ReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			children = (
 				561C4BE82BDEE05C00D9099D /* ColorSchemeManager.swift */,
 				56989F712BDEF0AF00A2077B /* ColorTheme.swift */,
+				562C854F2BE114F1007064AC /* Variable.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				567C194B2BE029430040EDFA /* ReposViewController.swift */,
+				562C854D2BE10EFA007064AC /* ReposViewModel.swift */,
 				567C194D2BE02BF60040EDFA /* ReposTableViewCell.swift */,
 			);
 			path = Repos;
@@ -256,6 +262,8 @@
 				561C4BEB2BDEE09200D9099D /* Color+Ext.swift in Sources */,
 				56989F702BDEEACD00A2077B /* UserDetailsViewModel.swift in Sources */,
 				567C194C2BE029430040EDFA /* ReposViewController.swift in Sources */,
+				562C854E2BE10EFA007064AC /* ReposViewModel.swift in Sources */,
+				562C85502BE114F1007064AC /* Variable.swift in Sources */,
 				56989F6E2BDEEA4100A2077B /* NetworkService.swift in Sources */,
 				567C19492BE023EF0040EDFA /* UIApplication+Ext.swift in Sources */,
 				561C4BD62BDEDCDE00D9099D /* UserDetailsView.swift in Sources */,

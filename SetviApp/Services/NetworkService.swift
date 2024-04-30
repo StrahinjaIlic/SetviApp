@@ -40,8 +40,8 @@ extension NetworkService: NetworkServiceProtocol {
         }
         // I lost some time to check why suddenly i got bad response, seems i reached some limit with API calls
         do {
-            let (data, response) = try await URLSession.shared.data(from: url)
-            print(response)
+            let (data, _) = try await URLSession.shared.data(from: url)
+//            print(response)
             return try JSONDecoder().decode(T.self, from: data)
         } catch let error as NSError {
             if error.code == NSURLErrorCancelled {

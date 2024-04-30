@@ -9,6 +9,7 @@ import Foundation
 
 protocol UserDetailsServiceProtocol {
     func fetchUserDetails(username: String) async throws -> UserDetails
+    func fetchRepos(username: String) async throws -> [Repository] 
 }
 
 class UserDetailsService: UserDetailsServiceProtocol {
@@ -20,5 +21,9 @@ class UserDetailsService: UserDetailsServiceProtocol {
     
     func fetchUserDetails(username: String) async throws -> UserDetails {
         return try await apiManager.fetch(endpoint: .userDetails(username: username))
+    }
+    
+    func fetchRepos(username: String) async throws -> [Repository] {
+        return try await apiManager.fetch(endpoint: .userRepositories(username: username))
     }
 }

@@ -8,7 +8,11 @@
 import UIKit
 import SwiftUI
 
+// Because i have lack of time to do list of commits (it would be anyway same logic) I decide to do repos in UIKit
+
 final class RepoListViewController: UIViewController {
+    
+    private var viewModel: ReposViewModel
     
     private let reposTableView: UITableView = {
         let tableView = UITableView()
@@ -27,6 +31,22 @@ final class RepoListViewController: UIViewController {
         super.viewDidLoad()
         
         setupViews()
+        viewModel.fetchRepos()
+        
+        viewModel.isLoading.onUpdate = { [weak self] isLoading in
+            if !isLoading {
+                self?.reposTableView.reloadData()
+            }
+        }
+    }
+    
+    init(viewModel: ReposViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
@@ -51,19 +71,27 @@ extension RepoListViewController {
 extension RepoListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.getRepoCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = reposTableView.dequeueReusableCell(
             withIdentifier: ReposTableViewCell.cellIdentifier, for: indexPath) as! ReposTableViewCell
+        let model = viewModel.getRepo(for: indexPath)
+        cell.configure(name: model.name)
         return cell
     }
 }
 
 struct RepoListView: UIViewControllerRepresentable {
+    @ObservedObject var viewModel: ReposViewModel
+    
+    init(viewModel: ReposViewModel) {
+        self.viewModel = viewModel
+    }
+    
     func makeUIViewController(context: Context) -> RepoListViewController {
-        return RepoListViewController()
+        return RepoListViewController(viewModel: viewModel)
     }
     
     func updateUIViewController(_ uiViewController: RepoListViewController, context: Context) {}

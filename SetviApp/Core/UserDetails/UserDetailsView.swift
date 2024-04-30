@@ -29,8 +29,8 @@ struct UserDetailsView: View {
                     ProgressView("Loading...")
                 }
                 
-                if let user = viewModel.user {
-                    ProfileView(user: user)
+                if let _ = viewModel.user {
+                    ProfileView(viewModel: viewModel)
                 }
             }
             .background(Color.theme.background)
@@ -40,7 +40,9 @@ struct UserDetailsView: View {
         }
         .onAppear {
             // Load existing user initially to show smth
-            viewModel.searchUserName = "radianttap"
+            viewModel.searchUserName = "strahinjailic"
+            
+            viewModel.fetchUserDetails()
         }
     }
 }
