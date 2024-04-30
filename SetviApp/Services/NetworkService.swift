@@ -39,6 +39,7 @@ extension NetworkService: NetworkServiceProtocol {
             throw NetworkError.invalidURL
         }
         // I lost some time to check why suddenly i got bad response, seems i reached some limit with API calls
+        // I had to print response in order to understand what suddenly went wrong
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
 //            print(response)
